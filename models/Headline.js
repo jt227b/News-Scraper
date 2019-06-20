@@ -1,7 +1,8 @@
 var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;
-
+mongoose.set('useCreateIndex', true);
+mongoose.set('useFindAndModify', false);
 var headlineSchema = new Schema({
 
   headline: {

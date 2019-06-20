@@ -5,9 +5,9 @@ var scrape = function () {
     return axios.get('https://www.nytimes.com/').then(function (res) {
         var $ = cheerio.load(res.data);
         var articles = [];
-        $('div.gs-c-promo-body').each(function (i, element) {
+        $("article").each(function (i, element) {
             var head = $(this)
-                .find('h3')
+                .find('h2')
                 .text()
                 .trim();
 
@@ -29,7 +29,7 @@ var scrape = function () {
                     summary: sumNeat,
                     url: url
                 };
-
+                console.log(articles)
                 articles.push(dataToAdd);
             }
         });

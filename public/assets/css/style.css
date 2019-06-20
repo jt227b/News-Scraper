@@ -1,5 +1,9 @@
-.jumbotron .background-image {
-    height: 100%;
-    background-image: url("../images/dailyNews.jpg");
+.jumbotron  {
+   
+    background-image: url("../images/administration-articles-bank-261949.jpg");
     background-size: cover;
+  }
+
+  .caption{
+    color: azure;
   }
